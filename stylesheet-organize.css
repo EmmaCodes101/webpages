@@ -1,0 +1,127 @@
+/*Css page*/
+
+
+.container {
+  display: grid; 
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 0.5fr 1fr 1fr; 
+  gap: 12px 12px; 
+  grid-template-areas: 
+    "Picture about-me about-me about-me about-me about-me about-me"
+    "Picture projects1 projects1 projects2 projects2 exercises exercises"
+    "Picture projects1 projects1 projects2 projects2 exercises exercises"; 
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.5fr 0.3fr 0.5fr 0.5fr 0.5fr; 
+    gap: 12px 12px; 
+    grid-template-areas:
+      "Picture"
+      "about-me"
+      "projects1"
+      "projects2"
+      "exercises";
+  }
+  img {
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+  }
+}
+
+.Picture{
+  background-color: black;opacity:0.95;
+  grid-area: Picture; }
+
+img {
+  width:200px;
+  height:150px;
+  border-radius: 50%;
+}
+
+.about-me { 
+  width: 100%;
+  padding: 10px 0;
+  background-color: black;opacity:0.8;
+  grid-area: about-me; }
+
+  p{
+    font-size: 15px;
+    font-family: Courier;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 1em;   
+    color:rgb(255, 255, 255);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 55px;
+    font-family: Courier;
+    color: rgb(255, 217, 0);
+    text-shadow: 1px 1px;
+    }	
+
+  h2 {
+    text-align: center;
+    font-family: Courier;
+    font-size: 30px;
+    color:rgb(255, 217, 0);
+    
+    }	
+
+  h3{
+    text-align: center;
+    font-family: Courier;
+    text-decoration: underline;
+    font-size: 20px;
+    color:rgb(255, 217, 0);
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+  }
+
+
+.projects1 { 
+  background-color: black;opacity:0.8;
+  grid-area: projects1; }
+
+.projects2 { 
+  background-color: black;opacity:0.8;
+  grid-area: projects2; }
+
+.exercises { 
+  background-color: black;opacity:0.8;
+  grid-area: exercises; }
+
+
+
+body{
+  background-image: url("wheel.jpg");
+  /*background-color: rgb(23, 23, 23);*/
+}
+
+
+a:link, a:visited {
+  font-family: Courier;
+  font-weight: normal;
+  text-shadow: 3px black;
+  color: white;
+  
+}
+
+a:hover, a:active {
+  font-family: Courier;
+  font-weight: normal;
+  text-shadow: 1px black;
+  color: rgb(255, 217, 0);
+}
+
+
